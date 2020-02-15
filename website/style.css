@@ -1,0 +1,169 @@
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato";
+  color: white;
+  background-color: rgb(31, 36, 48);
+  background-color: #19191f;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid white;
+  margin-bottom: 50px;
+  background-color: #19191f;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  font-size: 20px;
+}
+
+li {
+  list-style-type: none;
+  padding: 0 20px;
+}
+
+#search_cont {
+  margin-right: 50px;
+}
+
+#search_field {
+  width: 200px;
+  height: 30px;
+  padding: 0 10px;
+  border: 0;
+}
+
+#search_button {
+  padding: 8px;
+  border-radius: 2px;
+  margin-left: 10px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Index page (Homepage) */
+.show {
+  position: relative;
+  width: 250px;
+  height: 400px;
+  display: flex;
+  margin: 10px;
+  color: black;
+  border-radius: 5px;
+}
+
+.show h1 {
+  position: absolute;
+  margin: 10px 10px;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.show div {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* Details page */
+
+#top {
+  margin: 25px 0;
+}
+
+#top img {
+  width: 150px;
+  height: 200px;
+}
+
+#bottom {
+  margin: 25px 0;
+  width: 500px;
+}
+
+#schedule_cont {
+  
+}
+
+#schedule_button {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#schedule {
+  display: none;
+}
+
+/* Contact page */
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact_input {
+  width: 250px;
+  height: 30px;
+  padding: 5px 10px;
+  margin: 5px 0;
+}
+
+#submit_contact {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.labels {
+  color: red;
+}
+
+#footer_contact {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}

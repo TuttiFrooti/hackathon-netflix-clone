@@ -5,8 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="js/contact.js"></script>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="main">
+    <div id="contact">
+      <input class="contact_input" id="name_cont" type="text" placeholder="Name">
+      <label for="name_cont" class="labels hidden">Invalid Name Input</label>
+      <input class="contact_input" id="email_cont" type="text" placeholder="Email">
+      <label for="email_cont" class="labels hidden">Invalid Email Input</label>
+      <input class="contact_input" id="pn_cont" type="text" placeholder="Phone number">
+      <label for="pn_cont" class="labels hidden">Inavlid Phone Number Input</label>
+      <button id="submit_contact">Submit</button>
+    </div>
+  </section>
+  <footer id="footer_contact">
+    <span>Copyright © This Weird Website</span>
+  </footer>
 </body>
 </html>

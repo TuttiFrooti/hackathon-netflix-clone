@@ -5,9 +5,27 @@ const onLoad = () => {
 }
 window.addEventListener('load', onLoad);
 
-
 const searchForShow = () => {
+  let input = document.querySelector('#search_field')
 
+  let allCards = document.querySelectorAll('.show');
+
+  allCards.forEach(e => {
+
+    if(input.value.length === 0) {
+      e.classList.remove("hidden");
+    } else {
+      let regex = new RegExp("(?:<h1>)" + input.value.toLowerCase() + "(?:<\/h1>)", "gi");
+
+      let findShow = e.innerHTML.toLowerCase().match(regex);
+      
+      if (!!findShow) {
+        e.classList.remove("hidden");
+      } else {
+        e.classList.add("hidden");
+      }
+    }
+  })
 }
 
 const showAllCards = () => {
@@ -15,22 +33,15 @@ const showAllCards = () => {
   .then(r => r.json())
   .then(data => {
     let main = document.querySelector('.main');
-    let html = [];
-
     data.forEach(show => {
-      /* 
-        show.name
-        show.show.image.medium
-        show.show.id <- show ID for details page
-      */
       let createElm = document.createElement("a");
       createElm.className = "show";
-      createElm.href = `./details.html?${show.show.id}`
+      createElm.href = `./details.html?id=${show.show.id}`
       createElm.style.backgroundImage = `url(${show.show.image.medium})`;
       createElm.style.backgroundRepeat = "no-repeat";
       createElm.style.backgroundSize = "cover";
       createElm.innerHTML = `
-        <h1>${show.name}</h1>
+        <h1>${show.show.name}</h1>
         <div>Details</div>
       `;
       main.appendChild(createElm)
